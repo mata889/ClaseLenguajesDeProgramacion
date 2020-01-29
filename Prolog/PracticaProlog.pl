@@ -31,3 +31,4 @@ tio(X,Y):- hombre(X),parent(Z,X),parent(Y,Z).
 %X es primo de Y
 primo(X,Y):- tio(Z,Y),parent(Z,X).
 
+%aqui se hizo un cambio para el merge, hola mata
