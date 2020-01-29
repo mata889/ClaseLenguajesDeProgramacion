@@ -30,3 +30,4 @@ abuela(X,Y):- mujer(X),parent(X,Z),parent(Z,Y).
 tio(X,Y):- hombre(X),parent(Z,X),parent(Y,Z).
 %X es primo de Y
 primo(X,Y):- tio(Z,Y),parent(Z,X).
+
