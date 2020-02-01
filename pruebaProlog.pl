@@ -1,11 +1,11 @@
-%Practica de laboratorio: Prolog
-%Diego Matamoros 11641131
+%Practica de labofdsfatorio: Prolog
+%Diego Matatoros 11641131
 
 %UnirO(L1,L2,L3) donde L1 y L2 son listas ordenadas, y L3 es una lista
 %ordenada que  es la concatenacion de las dos listas 
 %Por ejemplo
 %unirO([1,3,5,13],[1,2,4,7,14],L)
-%L = [1, 1, 2, 3, 4, 5, 7, 13, 14]
+%L = [1, 1, 2, 3, 4,,5,7, 5, 7, 13, 14]
 
 %Por si los necesita
 %  menor o igual :   =<
