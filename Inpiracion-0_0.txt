@@ -1,0 +1,27 @@
+/*1 LISTA DE MAXIMOS*/
+
+listamayores(L1,K,Resp1):-listamayores(L1,K,[],Resp),invertir(Resp,Resp1).
+listamayores([],_,R,R).
+listamayores([H|T],K,Temp,Resp):-H>K,listamayores(T,K,[H|Temp],Resp),!.
+listamayores([H|T],K,Temp,Resp):-H<K,listamayores(T,K,Temp,Resp).
+
+/*listamayores([3,5,7,8,5,1,9,2],4,Resp).*/
+
+/*2 DIFERENCIA SIMETRICA*/
+
+miembrode([H|_],H):-!.
+miembrode([H|T],X):- X \=H, miembrode(T,X).
+
+diferenciasim(L1,L2,Resp):-diferencia(L1,L2,[],Resp1),diferencia(L2,L1,[],Resp2),invertir(Resp2,Resp3),unir(Resp1,Resp3,Resp).
+diferencia([],_,R,R):-!.
+diferencia([H|T],Lista,Temp,Resp):-not(miembrode(Lista,H)),diferencia(T,Lista,[H|Temp],Resp),!.
+diferencia([H|T],Lista,Temp,Resp):-miembrode(Lista,H),diferencia(T,Lista,Temp,Resp).
+
+/*diferenciasim([1,2,4,5,7,8],[2,5,6,7,9],L3).*/
+
+unir([],L2,L2).
+unir([H|T],L2,Resp):-unir(T,[H|L2],Resp).
+
+invertir(L,R):-invertir(L,[],R).
+invertir([],R,R).
+invertir([H|T],Temp,R):-invertir(T,[H|Temp],R).
